@@ -1,4 +1,29 @@
 module.exports = {
-  root: true,
-  extends: '@react-native-community',
+  env: {
+    browser: true,
+    es6: true,
+  },
+  extends: [
+    'plugin:react/recommended',
+    'airbnb',
+  ],
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+  },
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 2018,
+    sourceType: 'module',
+  },
+  plugins: [
+    'react',
+  ],
+  rules: {
+    'import/no-named-as-default': 0,
+    'import/no-named-as-default-member': 0,
+    'parser': 'babel-eslint'
+  },
 };
